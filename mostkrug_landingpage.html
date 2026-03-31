@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Besenwirtschaft Zum Mostkrug – Erkenbrechtsweiler | Schwäbische Erlebnisgastronomie</title>
+<meta name="description" content="Besenwirtschaft Zum Mostkrug in Erkenbrechtsweiler – authentische schwäbische Küche, eigener Most aus Streuobstwiesen, altes Bauernhaus von 1922. Seit 2004 ein echtes Erlebnis auf der Schwäbischen Alb.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #f5f0e8;
+    --parchment: #ede5d0;
+    --warm-brown: #3d2b1f;
+    --dark-oak: #1e1208;
+    --moss: #5a6b3a;
+    --moss-light: #7a8c52;
+    --amber: #c8821a;
+    --amber-dark: #9e6410;
+    --rust: #8b3a1e;
+    --stone: #8a7d6b;
+    --stone-light: #b5a898;
+    --text: #2d1e10;
+    --text-light: #5c4a35;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'EB Garamond', Georgia, serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 18px;
+    overflow-x: hidden;
+  }
+
+  /* ═══ NAVIGATION ═══ */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 18px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(30,18,8,0.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(200,130,26,0.25);
+    transition: all 0.3s;
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    color: var(--cream);
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .nav-logo-icon {
+    width: 38px; height: 38px;
+    background: var(--amber);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: var(--stone-light);
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-family: 'EB Garamond', serif;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--amber); }
+  .nav-cta {
+    background: var(--amber);
+    color: var(--dark-oak) !important;
+    padding: 8px 20px !important;
+    border-radius: 2px;
+    font-weight: 500;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--amber-dark) !important; color: var(--cream) !important; }
+
+  /* ═══ HERO ═══ */
+  .hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 80px 0;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://mostkrug.de/A_Wordpress/wp-content/uploads/2017/01/cropped-Räumlichkeiten-Mostkrug-Festlich_1-1.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    transform: scale(1.04);
+    transition: transform 8s ease-out;
+  }
+  .hero-bg.loaded { transform: scale(1); }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(14,8,2,0.3) 0%,
+      rgba(14,8,2,0.1) 40%,
+      rgba(14,8,2,0.75) 75%,
+      rgba(14,8,2,0.92) 100%
+    );
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 60px;
+    animation: fadeUp 1.2s ease-out 0.3s both;
+  }
+  .hero-eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--amber);
+    font-family: 'EB Garamond', serif;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 40px; height: 1px;
+    background: var(--amber);
+  }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 400;
+    color: var(--cream);
+    line-height: 1.15;
+    margin-bottom: 24px;
+    letter-spacing: -0.01em;
+  }
+  h1 em {
+    font-style: italic;
+    color: var(--amber);
+  }
+  .hero-sub {
+    font-size: 1.15rem;
+    color: rgba(245,240,232,0.8);
+    max-width: 560px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  .hero-ctas {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .btn-primary {
+    display: inline-block;
+    background: var(--amber);
+    color: var(--dark-oak);
+    padding: 14px 32px;
+    font-family: 'EB Garamond', serif;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    border-radius: 2px;
+    font-weight: 500;
+    transition: all 0.25s;
+    border: 2px solid var(--amber);
+  }
+  .btn-primary:hover {
+    background: transparent;
+    color: var(--amber);
+  }
+  .btn-secondary {
+    display: inline-block;
+    color: var(--cream);
+    padding: 14px 32px;
+    font-family: 'EB Garamond', serif;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    border-radius: 2px;
+    border: 1px solid rgba(245,240,232,0.4);
+    transition: all 0.25s;
+  }
+  .btn-secondary:hover {
+    border-color: var(--amber);
+    color: var(--amber);
+  }
+  .hero-scroll {
+    position: absolute;
+    bottom: 30px;
+    right: 60px;
+    z-index: 2;
+    color: var(--stone-light);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.7;
+    animation: pulse 2s infinite;
+  }
+  .hero-scroll::after {
+    content: '';
+    display: block;
+    width: 1px; height: 60px;
+    background: linear-gradient(to bottom, var(--stone-light), transparent);
+  }
+
+  /* ═══ SAISON BANNER ═══ */
+  .saison-banner {
+    background: var(--dark-oak);
+    color: var(--cream);
+    padding: 18px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    border-bottom: 2px solid var(--amber);
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .saison-banner strong { color: var(--amber); }
+  .saison-divider { color: var(--stone); opacity: 0.5; }
+
+  /* ═══ SECTION BASICS ═══ */
+  section { position: relative; }
+
+  .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .section-label {
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--amber);
+    font-family: 'EB Garamond', serif;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 28px; height: 1px;
+    background: var(--amber);
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    font-weight: 400;
+    color: var(--warm-brown);
+    line-height: 1.25;
+    margin-bottom: 20px;
+  }
+  h2 em { font-style: italic; color: var(--moss); }
+
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--warm-brown);
+    margin-bottom: 12px;
+  }
+
+  p { margin-bottom: 16px; color: var(--text-light); line-height: 1.75; }
+  p:last-child { margin-bottom: 0; }
+
+  /* ═══ ATMOSPHÄRE / ERLEBNIS ═══ */
+  .erlebnis {
+    padding: 100px 0;
+    background: var(--cream);
+  }
+  .erlebnis-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .erlebnis-img-stack {
+    position: relative;
+    height: 560px;
+  }
+  .erlebnis-img-stack img {
+    position: absolute;
+    object-fit: cover;
+    border-radius: 2px;
+    box-shadow: 0 20px 60px rgba(30,18,8,0.2);
+  }
+  .img-main {
+    width: 80%;
+    height: 75%;
+    top: 0; left: 0;
+  }
+  .img-secondary {
+    width: 55%;
+    height: 52%;
+    bottom: 0; right: 0;
+    border: 6px solid var(--cream);
+  }
+  .erlebnis-text .quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--warm-brown);
+    border-left: 3px solid var(--amber);
+    padding-left: 24px;
+    margin: 28px 0;
+    line-height: 1.5;
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 28px;
+  }
+  .tag {
+    background: var(--parchment);
+    color: var(--text-light);
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    border-radius: 20px;
+    letter-spacing: 0.04em;
+    border: 1px solid rgba(138,125,107,0.2);
+  }
+
+  /* ═══ MOST ═══ */
+  .most {
+    padding: 100px 0;
+    background: var(--dark-oak);
+    overflow: hidden;
+  }
+  .most::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('https://mostkrug.de/A_Wordpress/wp-content/gallery/feiern-im-mostkrug/Außenbewirtung-Mostkrug-Juli_2.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.12;
+    filter: grayscale(50%);
+  }
+  .most .section-inner { position: relative; z-index: 1; }
+  .most .section-label { color: var(--amber); }
+  .most h2 { color: var(--cream); }
+  .most h2 em { color: var(--amber); }
+  .most-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+    margin-top: 50px;
+  }
+  .most-intro p { color: rgba(245,240,232,0.75); }
+  .most-intro .quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--amber);
+    margin: 28px 0;
+    line-height: 1.5;
+  }
+  .most-sorten {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .sorte-card {
+    background: rgba(245,240,232,0.06);
+    border: 1px solid rgba(200,130,26,0.2);
+    padding: 20px;
+    border-radius: 2px;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .sorte-card:hover {
+    background: rgba(200,130,26,0.12);
+    border-color: var(--amber);
+  }
+  .sorte-card .icon { font-size: 1.5rem; margin-bottom: 8px; }
+  .sorte-card h3 { color: var(--cream); font-size: 1rem; margin-bottom: 4px; }
+  .sorte-card p { color: rgba(245,240,232,0.6); font-size: 0.88rem; margin: 0; }
+  .most-cta { margin-top: 32px; }
+  .btn-amber-outline {
+    display: inline-block;
+    color: var(--amber);
+    padding: 13px 30px;
+    font-family: 'EB Garamond', serif;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 1px solid var(--amber);
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+    transition: all 0.25s;
+  }
+  .btn-amber-outline:hover {
+    background: var(--amber);
+    color: var(--dark-oak);
+  }
+
+  /* ═══ KÜCHE ═══ */
+  .kueche {
+    padding: 100px 0;
+    background: var(--parchment);
+  }
+  .kueche-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 80px;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .kueche-menu {
+    background: var(--cream);
+    border: 1px solid rgba(138,125,107,0.2);
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(30,18,8,0.08);
+  }
+  .kueche-menu-header {
+    background: var(--warm-brown);
+    color: var(--cream);
+    padding: 22px 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+  .kueche-menu-body { padding: 24px 30px; }
+  .menu-category {
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--amber-dark);
+    margin: 20px 0 10px 0;
+  }
+  .menu-category:first-child { margin-top: 0; }
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(138,125,107,0.2);
+    font-size: 0.95rem;
+    color: var(--text);
+  }
+  .menu-item:last-child { border-bottom: none; }
+  .menu-item-name { flex: 1; }
+  .menu-item-desc { color: var(--stone); font-size: 0.82rem; display: block; }
+  .kueche-text { }
+  .kueche-highlight {
+    background: var(--warm-brown);
+    color: var(--cream);
+    padding: 30px;
+    border-radius: 2px;
+    margin-top: 28px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  .kueche-highlight cite {
+    display: block;
+    margin-top: 12px;
+    font-size: 0.85rem;
+    font-style: normal;
+    color: var(--amber);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* ═══ GESCHICHTE ═══ */
+  .geschichte {
+    padding: 100px 0;
+    background: var(--cream);
+  }
+  .geschichte-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .timeline {
+    position: relative;
+    padding-left: 32px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 8px; bottom: 8px;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--amber), transparent);
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 36px;
+  }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -36px; top: 8px;
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: var(--amber);
+    border: 2px solid var(--cream);
+    box-shadow: 0 0 0 1px var(--amber);
+  }
+  .timeline-year {
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    color: var(--amber);
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .timeline-item h3 { font-size: 1.05rem; margin-bottom: 6px; }
+  .timeline-item p { font-size: 0.95rem; margin: 0; }
+  .geschichte-img {
+    position: relative;
+  }
+  .geschichte-img img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 2px;
+    box-shadow: 0 20px 60px rgba(30,18,8,0.15);
+  }
+  .geschichte-img-caption {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: var(--warm-brown);
+    color: var(--cream);
+    padding: 20px 24px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    max-width: 220px;
+    line-height: 1.5;
+    box-shadow: 0 8px 30px rgba(30,18,8,0.2);
+  }
+
+  /* ═══ GALLERY ═══ */
+  .gallery {
+    padding: 80px 0;
+    background: var(--parchment);
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 220px 220px;
+    gap: 12px;
+    margin-top: 40px;
+  }
+  .gallery-item {
+    overflow: hidden;
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+  }
+  .gallery-item:first-child {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
+  .gallery-item:nth-child(4) {
+    grid-column: 3 / 5;
+    grid-row: 2 / 3;
+  }
+  .gallery-item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    filter: saturate(0.9);
+  }
+  .gallery-item:hover img {
+    transform: scale(1.06);
+    filter: saturate(1);
+  }
+  .gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(30,18,8,0);
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gallery-item:hover .gallery-overlay {
+    background: rgba(30,18,8,0.35);
+  }
+
+  /* ═══ EVENTS & RESERVIERUNG ═══ */
+  .events {
+    padding: 100px 0;
+    background: var(--cream);
+  }
+  .events-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 60px;
+    margin-top: 50px;
+    align-items: start;
+  }
+  .events-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .event-card {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 24px;
+    background: var(--parchment);
+    border-radius: 2px;
+    border-left: 3px solid var(--amber);
+    transition: box-shadow 0.2s;
+  }
+  .event-card:hover { box-shadow: 0 6px 30px rgba(30,18,8,0.1); }
+  .event-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+    width: 48px;
+    text-align: center;
+  }
+  .event-card h3 { font-size: 1.05rem; margin-bottom: 6px; }
+  .event-card p { font-size: 0.92rem; color: var(--stone); margin: 0; }
+  .reservierung-box {
+    background: var(--warm-brown);
+    color: var(--cream);
+    padding: 40px;
+    border-radius: 2px;
+    position: sticky;
+    top: 90px;
+  }
+  .reservierung-box h3 {
+    color: var(--cream);
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+  }
+  .reservierung-box p { color: rgba(245,240,232,0.75); font-size: 0.95rem; }
+  .oeffnung-list {
+    list-style: none;
+    margin: 24px 0;
+  }
+  .oeffnung-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(245,240,232,0.12);
+    font-size: 0.92rem;
+  }
+  .oeffnung-list li:last-child { border-bottom: none; }
+  .oeffnung-tag { color: rgba(245,240,232,0.6); }
+  .oeffnung-zeit { color: var(--amber); font-weight: 500; }
+  .btn-reservieren {
+    display: block;
+    text-align: center;
+    background: var(--amber);
+    color: var(--dark-oak);
+    padding: 15px 32px;
+    font-family: 'EB Garamond', serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+    margin-top: 24px;
+    transition: all 0.25s;
+  }
+  .btn-reservieren:hover { background: #b57218; }
+  .btn-reservieren-outline {
+    display: block;
+    text-align: center;
+    color: var(--cream);
+    padding: 13px 32px;
+    font-family: 'EB Garamond', serif;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border: 1px solid rgba(245,240,232,0.3);
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+    margin-top: 10px;
+    transition: all 0.25s;
+  }
+  .btn-reservieren-outline:hover { border-color: var(--amber); color: var(--amber); }
+
+  /* ═══ KONTAKT & ANFAHRT ═══ */
+  .kontakt {
+    padding: 100px 0;
+    background: var(--dark-oak);
+    position: relative;
+    overflow: hidden;
+  }
+  .kontakt::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('https://mostkrug.de/A_Wordpress/wp-content/gallery/feiern-im-mostkrug/Winterbilder-Mostkrug-aussen-Januar-2017_2.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.08;
+  }
+  .kontakt .section-inner { position: relative; z-index: 1; }
+  .kontakt .section-label { color: var(--amber); }
+  .kontakt h2 { color: var(--cream); }
+  .kontakt-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 48px;
+    margin-top: 60px;
+  }
+  .kontakt-card {
+    padding: 36px 30px;
+    background: rgba(245,240,232,0.05);
+    border: 1px solid rgba(245,240,232,0.1);
+    border-radius: 2px;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .kontakt-card:hover {
+    border-color: rgba(200,130,26,0.4);
+    background: rgba(245,240,232,0.08);
+  }
+  .kontakt-card-icon { font-size: 2rem; margin-bottom: 16px; }
+  .kontakt-card h3 { color: var(--cream); font-size: 1.05rem; margin-bottom: 10px; }
+  .kontakt-card p, .kontakt-card a {
+    color: rgba(245,240,232,0.65);
+    font-size: 0.95rem;
+    text-decoration: none;
+    margin: 0;
+    line-height: 1.7;
+  }
+  .kontakt-card a:hover { color: var(--amber); }
+  .kontakt-card strong { color: var(--amber); }
+
+  /* ═══ MAP SECTION ═══ */
+  .map-section {
+    height: 320px;
+    background: var(--parchment);
+    position: relative;
+    overflow: hidden;
+  }
+  .map-section iframe {
+    width: 100%; height: 100%;
+    border: none;
+    filter: sepia(20%) saturate(90%);
+  }
+
+  /* ═══ FOOTER ═══ */
+  footer {
+    background: var(--dark-oak);
+    border-top: 1px solid rgba(200,130,26,0.15);
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: gap;
+    gap: 20px;
+  }
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    color: var(--cream);
+    font-size: 1.1rem;
+  }
+  .footer-brand small {
+    display: block;
+    color: var(--stone);
+    font-family: 'EB Garamond', serif;
+    font-size: 0.85rem;
+    margin-top: 4px;
+    letter-spacing: 0.04em;
+  }
+  .footer-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+  .footer-links a {
+    color: var(--stone);
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--amber); }
+  .footer-social {
+    display: flex;
+    gap: 14px;
+  }
+  .footer-social a {
+    width: 36px; height: 36px;
+    border: 1px solid rgba(245,240,232,0.15);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--stone-light);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+  }
+  .footer-social a:hover { border-color: var(--amber); color: var(--amber); }
+
+  /* ═══ DIVIDER ═══ */
+  .ornament {
+    text-align: center;
+    color: var(--amber);
+    font-size: 1.4rem;
+    padding: 8px 0;
+    opacity: 0.6;
+  }
+
+  /* ═══ ANIMATIONS ═══ */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 0.4; }
+  }
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ═══ RESPONSIVE ═══ */
+  @media (max-width: 900px) {
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+    .hero-content { padding: 0 24px; }
+    .section-inner { padding: 0 24px; }
+    .erlebnis-grid, .most-grid, .kueche-layout, .geschichte-inner,
+    .events-grid, .kontakt-grid { grid-template-columns: 1fr; gap: 40px; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+    .gallery-item:first-child, .gallery-item:nth-child(4) { grid-column: auto; grid-row: auto; }
+    h1 { font-size: 2.2rem; }
+    .erlebnis-img-stack { height: 320px; }
+    footer { flex-direction: column; align-items: flex-start; }
+    .most-sorten { grid-template-columns: 1fr; }
+    .geschichte-img-caption { position: static; margin-top: 16px; max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════ NAVIGATION ══════════ -->
+<nav id="navbar">
+  <a class="nav-logo" href="#">
+    <div class="nav-logo-icon">🍵</div>
+    Mostkrug · Erkenbrechtsweiler
+  </a>
+  <ul class="nav-links">
+    <li><a href="#erlebnis">Erlebnis</a></li>
+    <li><a href="#most">Most</a></li>
+    <li><a href="#kueche">Küche</a></li>
+    <li><a href="#geschichte">Geschichte</a></li>
+    <li><a href="#events">Feiern</a></li>
+    <li><a href="#kontakt" class="nav-cta">Reservieren</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Besenwirtschaft · Seit 2004 · Schwäbische Alb</div>
+    <h1>Die Besenwirtschaft <em>Zum Mostkrug</em> in Erkenbrechtsweiler</h1>
+    <p class="hero-sub">Ein altes Bauernhaus von 1922 – eingerichtet wie zu Großmutters Zeiten. Echte schwäbische Küche, eigener Most aus Streuobstwiesen, und eine Gemeinschaft, die man so schnell nicht vergisst.</p>
+    <div class="hero-ctas">
+      <a href="#kontakt" class="btn-primary">Tisch reservieren</a>
+      <a href="#erlebnis" class="btn-secondary">Das Erlebnis entdecken</a>
+    </div>
+  </div>
+  <div class="hero-scroll">Entdecken</div>
+</section>
+
+<!-- ══════════ SAISON BANNER ══════════ -->
+<div class="saison-banner">
+  <span>🌸 Frühlingspause – nächste Öffnung <strong>18. Mai 2026 ab 19:00 Uhr</strong></span>
+  <span class="saison-divider">|</span>
+  <span>Sommersaison <strong>04.06. – 26.07.2026</strong></span>
+  <span class="saison-divider">|</span>
+  <span>Herbst-Winter <strong>02.10.2026 – 28.02.2027</strong></span>
+</div>
+
+<!-- ══════════ ATMOSPHÄRE & ERLEBNIS ══════════ -->
+<section class="erlebnis" id="erlebnis">
+  <div class="section-inner">
+    <div class="erlebnis-grid">
+      <div class="erlebnis-img-stack fade-in">
+        <img class="img-main" src="https://mostkrug.de/A_Wordpress/wp-content/gallery/feiern-im-mostkrug/Gemütlich1.jpg" alt="Gemütliche Stube im Mostkrug" loading="lazy">
+        <img class="img-secondary" src="https://mostkrug.de/A_Wordpress/wp-content/gallery/feiern-im-mostkrug/Opa-und-Oma-in-der-Stube.jpg" alt="Gäste in der Stube des Mostkrug" loading="lazy">
+      </div>
+      <div class="erlebnis-text fade-in">
+        <div class="section-label">Besenwirtschaft & Erlebnis</div>
+        <h2>Wo das Schwäbische noch <em>echt</em> ist</h2>
+        <p>Im Mostkrug wird nicht gestylt und inszeniert – hier passiert das, was in modernen Restaurants längst verloren gegangen ist: echte Begegnung, lebendige Tischrunde, der Geruch von Holzofenfeuer und das Klirren von Mostkrügen in niedrigen Zimmerdecken.</p>
+        <p>Die Räume des alten Bauernhauses aus dem Jahr 1922 sind so eingerichtet, wie sie immer waren. Enge Stuben, schwere Holzmöbel, vergilbte Bilder an der Wand. Nicht als Kulisse – sondern weil es so ist.</p>
+        <div class="quote">"In Zimmern, eingerichtet wie zu Großmutters Zeiten, genießen Sie bei heimeligem Holzofenfeuer schwäbische Spezialitäten einer richtig guten Besenwirtschaftsküche."</div>
+        <div class="tags">
+          <span class="tag">🏡 Historisches Bauernhaus</span>
+          <span class="tag">🔥 Holzofenfeuer</span>
+          <span class="tag">🤝 Gemeinsam sitzen</span>
+          <span class="tag">🌿 Regional & ehrlich</span>
+          <span class="tag">🗺 Schwäbische Alb</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ MOST ══════════ -->
+<section class="most" id="most">
+  <div class="section-inner">
+    <div class="section-label">Most aus eigener Herstellung</div>
+    <h2>Bis zu 10 Sorten eigener Most – <em>vom Baum direkt ins Glas</em></h2>
+    <div class="most-grid">
+      <div class="most-intro fade-in">
+        <p>Das Leitprodukt des Mostkrug ist sein Most – und das ist wortwörtlich zu verstehen. Was hier ausgeschenkt wird, wächst auf den eigenen Streuobstwiesen rund um Erkenbrechtsweiler. Alte Apfel- und Birnensorten, handgelesen, naturvergoren.</p>
+        <p>Bis zu zehn verschiedene Sorten stehen in der Saison zur Auswahl – von fruchtig-mild bis herb-tanninreich. Kein Most ist wie der andere. Und keiner kommt von irgendwo anders.</p>
+        <div class="quote">Most ist kein Getränk. Most ist Landschaft im Glas.</div>
+        <div class="most-cta">
+          <a href="https://mostkrug.de/A_Wordpress/essen-und-trinken/" class="btn-amber-outline" target="_blank">Zur Getränkekarte →</a>
+        </div>
+      </div>
+      <div class="most-sorten fade-in">
+        <div class="sorte-card">
+          <div class="icon">🍎</div>
+          <h3>Apfelmost</h3>
+          <p>Leicht, fruchtig, traditionell. Die Basis des Mostkrug.</p>
+        </div>
+        <div class="sorte-card">
+          <div class="icon">🍐</div>
+          <h3>Birnenmost</h3>
+          <p>Mild und würzig – für Most-Einsteiger wie -Kenner.</p>
+        </div>
+        <div class="sorte-card">
+          <div class="icon">🌰</div>
+          <h3>Cuvée-Most</h3>
+          <p>Verschnitte aus mehreren Sorten – komplex und rund.</p>
+        </div>
+        <div class="sorte-card">
+          <div class="icon">✨</div>
+          <h3>Spezialitäten</h3>
+          <p>Je nach Ernte – bis zu 10 Sorten in der Saison.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ KÜCHE ══════════ -->
+<section class="kueche" id="kueche">
+  <div class="section-inner">
+    <div class="section-label">Regionale Küche</div>
+    <h2>Schwäbische Küche – <em>handwerklich, ehrlich, satt</em></h2>
+    <div class="kueche-layout">
+      <div class="kueche-menu fade-in">
+        <div class="kueche-menu-header">Aus der Mostkrug-Küche</div>
+        <div class="kueche-menu-body">
+          <div class="menu-category">Klassiker</div>
+          <div class="menu-item">
+            <div class="menu-item-name">
+              Maultaschen in Brühe
+              <span class="menu-item-desc">Selbstgemacht, mit Frischei-Teig</span>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">
+              Linsen mit Saibling & Spätzle
+              <span class="menu-item-desc">Der schwäbische Freitagsklassiker</span>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">
+              Schweinebraten mit Knödel
+              <span class="menu-item-desc">Aus dem Holzofen, in der Saison</span>
+            </div>
+          </div>
+          <div class="menu-category">Brotzeiten & Kleines</div>
+          <div class="menu-item">
+            <div class="menu-item-name">
+              Hausgemachte Wurscht
+              <span class="menu-item-desc">Vom regionalen Metzger</span>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">
+              Käsebrot & Obatzda
+              <span class="menu-item-desc">Zur Brotzeit am Sonntag</span>
+            </div>
+          </div>
+          <div class="menu-category">Süßes</div>
+          <div class="menu-item">
+            <div class="menu-item-name">
+              Dampfnudeln mit Vanillesauce
+              <span class="menu-item-desc">Das schwäbische Dessert schlechthin</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="kueche-text fade-in">
+        <p>Die Küche im Mostkrug folgt keiner Trend-Karte und keinem Restaurant-Konzept. Sie folgt der Saison, den Zutaten, die da sind, und der Tradition, die man hier kennt.</p>
+        <p>Schwäbische Spezialitäten – von Maultaschen über Linsen mit Spätzle bis zu hausgemachten Dampfnudeln. Warme Küche durchgehend: freitags und samstags ab 18 Uhr, sonntags und feiertags ab 12 Uhr.</p>
+        <p>Was nicht regional und saisonal ist, steht nicht auf der Karte. Was auf der Karte steht, wird handwerklich zubereitet. So einfach ist das.</p>
+        <div class="kueche-highlight">
+          "Hier isst man nicht, weil man Hunger hat. Man kommt, weil man sich etwas gönnen will."
+          <cite>— Ein Stammgast</cite>
+        </div>
+        <div style="margin-top: 24px;">
+          <a href="https://mostkrug.de/A_Wordpress/essen-und-trinken/" class="btn-primary" target="_blank" style="font-size:0.95rem;">Vollständige Speisekarte</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ IMPRESSIONEN ══════════ -->
+<section class="gallery" id="impressionen">
+  <div class="section-inner">
+    <div class="section-label">Impressionen</div>
+    <h2>Bilder sagen mehr als <em>tausend Worte</em></h2>
+  </div>
+  <div style="max-width:1200px; margin: 0 auto; padding: 0 40px;">
+    <div class="gallery-grid fade-in">
+      <div class="gallery-item">
+        <img src="https://mostkrug.de/A_Wordpress/wp-content/gallery/feiern-im-mostkrug/Außenbewirtung-Mostkrug-Juli_2.jpg" alt="Außenbewirtung Mostkrug im Sommer" loading="lazy">
+        <div class="gallery-overlay"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://mostkrug.de/A_Wordpress/wp-content/gallery/feiern-im-mostkrug/IMG_7805.jpg" alt="Gäste im Mostkrug" loading="lazy">
+        <div class="gallery-overlay"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://mostkrug.de/A_Wordpress/wp-content/gallery/feiern-im-mostkrug/Räumlichkeiten-Mostkrug-Festlich_2.jpg" alt="Festliche Räumlichkeiten" loading="lazy">
+        <div class="gallery-overlay"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://mostkrug.de/A_Wordpress/wp-content/gallery/feiern-im-mostkrug/Winterbilder-Mostkrug-Wandergruppe-Januar-2017.jpg" alt="Wandergruppe im Mostkrug Winter" loading="lazy">
+        <div class="gallery-overlay"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://mostkrug.de/A_Wordpress/wp-content/gallery/feiern-im-mostkrug/Erkenbrechtsweiler.jpg" alt="Erkenbrechtsweiler Dorfansicht" loading="lazy">
+        <div class="gallery-overlay"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://mostkrug.de/A_Wordpress/wp-content/gallery/feiern-im-mostkrug/Gemütlich2.jpg" alt="Gemütliche Atmosphäre im Mostkrug" loading="lazy">
+        <div class="gallery-overlay"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ GESCHICHTE ══════════ -->
+<section class="geschichte" id="geschichte">
+  <div class="section-inner">
+    <div class="section-label">Geschichte & Familie</div>
+    <h2>Ein Haus mit <em>hundert Jahren</em> Charakter</h2>
+    <div class="geschichte-inner">
+      <div class="timeline fade-in">
+        <div class="timeline-item">
+          <div class="timeline-year">1922</div>
+          <h3>Das Bauernhaus entsteht</h3>
+          <p>In Erkenbrechtsweiler auf der Schwäbischen Alb wird das Haus gebaut, das bis heute die Seele des Mostkrug trägt. Holz, Stein, Handwerk.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2004</div>
+          <h3>Der Mostkrug öffnet seine Türen</h3>
+          <p>Familie Dieterich haucht dem alten Gebäude neues Leben ein – als Besenwirtschaft mit eigenem Most und echter schwäbischer Küche.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">Heute</div>
+          <h3>Mehr als ein Lokal</h3>
+          <p>Über 20 Jahre Stammgäste, internationale Besucher aus Dutzenden von Ländern, und jedes Jahr neue Ernte-Sorten Most. Die Besenwirtschaft lebt.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">Tradition</div>
+          <h3>Familiengeführt – bewusst so</h3>
+          <p>Thomas Dieterich und sein Team stehen selbst in der Küche und am Ausschank. Kein Franchisekonzept, kein Investorenrestaurant. Nur echte Gastfreundschaft.</p>
+        </div>
+      </div>
+      <div class="geschichte-img fade-in">
+        <img src="https://mostkrug.de/A_Wordpress/wp-content/gallery/feiern-im-mostkrug/Wirtsleute-vom-Mostkrug.jpg" alt="Das Wirtsleute-Team des Mostkrug" loading="lazy">
+        <div class="geschichte-img-caption">„Ein altes Bauernhaus ist wieder zum Leben erwacht."</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ EVENTS & RESERVIERUNG ══════════ -->
+<section class="events" id="events">
+  <div class="section-inner">
+    <div class="section-label">Events & Reservierung</div>
+    <h2>Feiern im Mostkrug – <em>wenn's besonders sein soll</em></h2>
+    <div class="events-grid">
+      <div class="events-cards fade-in">
+        <div class="event-card">
+          <div class="event-icon">🥂</div>
+          <div>
+            <h3>Geburtstage & Jubiläen</h3>
+            <p>Die historischen Räume des Mostkrug eignen sich perfekt für Feiern im engsten Familien- oder Freundeskreis. Bis zu mehrere Dutzend Personen, ganz nach Absprache.</p>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-icon">🥾</div>
+          <div>
+            <h3>Wandergruppen & Vereinsausflüge</h3>
+            <p>Der Mostkrug ist ein natürlicher Endpunkt jeder Tour auf der Schwäbischen Alb. Gruppenreservierungen auf Anfrage – wir besprechen alles persönlich.</p>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-icon">💍</div>
+          <div>
+            <h3>Hochzeiten & besondere Anlässe</h3>
+            <p>Kleine, intime Hochzeitsgesellschaften finden im Mostkrug eine unvergessliche Kulisse. Nicht trotz – wegen der Unvollkommenheit des Hauses.</p>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-icon">🎄</div>
+          <div>
+            <h3>Weihnachts- & Firmenfeiern</h3>
+            <p>Herbst und Winter sind die Hauptsaison. Holzofenwärme, Most und schwäbische Küche – das ist ein Weihnachtsessen, das in Erinnerung bleibt.</p>
+          </div>
+        </div>
+      </div>
+      <div class="fade-in">
+        <div class="reservierung-box">
+          <h3>Jetzt reservieren</h3>
+          <p>Wir sind keine Schnellgastronomie – eine Reservierung sichert deinen Platz und hilft uns, euch so zu empfangen wie ihr es verdient.</p>
+          <ul class="oeffnung-list">
+            <li>
+              <span class="oeffnung-tag">Fr. & Sa.</span>
+              <span class="oeffnung-zeit">18:00 – ca. 23:00 Uhr</span>
+            </li>
+            <li>
+              <span class="oeffnung-tag">So. & Feiertage</span>
+              <span class="oeffnung-zeit">12:00 – 19:00 Uhr</span>
+            </li>
+            <li>
+              <span class="oeffnung-tag">Warme Küche</span>
+              <span class="oeffnung-zeit">durchgehend</span>
+            </li>
+            <li>
+              <span class="oeffnung-tag">Saisonbetrieb</span>
+              <span class="oeffnung-zeit">Juni–Juli & Okt.–Feb.</span>
+            </li>
+          </ul>
+          <a href="https://mostkrug.de/A_Wordpress/reservierungsanfrage-kontakt/" class="btn-reservieren" target="_blank">Reservierungsanfrage senden</a>
+          <a href="https://mostkrug.de/A_Wordpress/feiern-im-mostkrug/" class="btn-reservieren-outline" target="_blank">Feiern im Mostkrug →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ KONTAKT & ANFAHRT ══════════ -->
+<section class="kontakt" id="kontakt">
+  <div class="section-inner">
+    <div class="section-label">Kontakt & Anfahrt</div>
+    <h2>Wir freuen uns auf <em>Ihren Besuch</em></h2>
+    <div class="kontakt-grid">
+      <div class="kontakt-card fade-in">
+        <div class="kontakt-card-icon">📍</div>
+        <h3>Adresse</h3>
+        <p>
+          <strong>Besenwirtschaft Zum Mostkrug</strong><br>
+          Thomas Dieterich<br>
+          Kirchstraße 9<br>
+          73268 Erkenbrechtsweiler
+        </p>
+      </div>
+      <div class="kontakt-card fade-in">
+        <div class="kontakt-card-icon">✉️</div>
+        <h3>Kontakt</h3>
+        <p>
+          <a href="mailto:info@mostkrug.de">info@mostkrug.de</a><br><br>
+          <a href="https://mostkrug.de/A_Wordpress/reservierungsanfrage-kontakt/" target="_blank">→ Reservierungsformular</a><br>
+          <a href="https://mostkrug.de/A_Wordpress/shop/" target="_blank">→ Gutscheine bestellen</a>
+        </p>
+      </div>
+      <div class="kontakt-card fade-in">
+        <div class="kontakt-card-icon">🅿️</div>
+        <h3>Anfahrt & Parken</h3>
+        <p>
+          Erkenbrechtsweiler liegt auf der Schwäbischen Alb zwischen Nürtingen und Kirchheim. Parkmöglichkeiten im Ort vorhanden.<br><br>
+          <a href="https://mostkrug.de/A_Wordpress/anfahrtparken/" target="_blank">→ Anfahrtsbeschreibung</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ MAP ══════════ -->
+<div class="map-section">
+  <iframe
+    src="https://www.openstreetmap.org/export/embed.html?bbox=9.5267,48.5673,9.5467,48.5773&layer=mapnik&marker=48.5723,9.5367"
+    title="Mostkrug Erkenbrechtsweiler – Karte"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="footer-brand">
+    Besenwirtschaft Zum Mostkrug
+    <small>Kirchstraße 9 · 73268 Erkenbrechtsweiler · info@mostkrug.de</small>
+  </div>
+  <ul class="footer-links">
+    <li><a href="https://mostkrug.de/A_Wordpress/impressum/" target="_blank">Impressum</a></li>
+    <li><a href="https://mostkrug.de/A_Wordpress/datenschutzerklaerung/" target="_blank">Datenschutz</a></li>
+    <li><a href="https://mostkrug.de/A_Wordpress/newsletter/" target="_blank">Newsletter</a></li>
+    <li><a href="https://mostkrug.de/A_Wordpress/ferienwohnung/" target="_blank">Ferienwohnung</a></li>
+    <li><a href="https://mostkrug.de/A_Wordpress/presse/" target="_blank">Presse</a></li>
+  </ul>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/Mostkrug/" target="_blank" title="Facebook">f</a>
+    <a href="https://www.instagram.com/Mostkrug/" target="_blank" title="Instagram">ig</a>
+    <a href="https://twitter.com/Mostkrug/" target="_blank" title="Twitter">𝕏</a>
+  </div>
+</footer>
+
+<script>
+  // Hero Ken Burns
+  const heroBg = document.getElementById('heroBg');
+  setTimeout(() => heroBg.classList.add('loaded'), 100);
+
+  // Scroll fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, 100);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Stagger fade-in for grouped elements
+  document.querySelectorAll('.events-cards .event-card').forEach((card, i) => {
+    card.style.transitionDelay = `${i * 0.1}s`;
+    card.classList.add('fade-in');
+    observer.observe(card);
+  });
+  document.querySelectorAll('.sorte-card').forEach((card, i) => {
+    card.style.transitionDelay = `${i * 0.08}s`;
+    card.classList.add('fade-in');
+    observer.observe(card);
+  });
+</script>
+</body>
+</html>
